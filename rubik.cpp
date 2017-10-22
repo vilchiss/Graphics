@@ -98,10 +98,11 @@ void Cubo::setPosicion(int p) {
 
 void Cubo::setColor(short c[6]) {
     int i = 0, j = 0;
-    
+
     for (i = 0; i < 6; i++) {
-        for (j = 0; j < 3; j++)
+        for (j = 0; j < 3; j++) {
             colores[i][j] = COLORES[c[i]][j];
+        }
     }
 }
 void Cubo::setCoordenadasInicial(float coordenadas[3]) {
@@ -120,49 +121,49 @@ void Cubo::rotar(int angulo, float eje[3]) {
 
 void Cubo::dibujar() {
     glPushMatrix();
-    glTranslatef(coordenadas_iniciales[0],coordenadas_iniciales[1], coordenadas_iniciales[2]);
-	glBegin(GL_POLYGON); // Frontal
-    glColor3fv(colores[0]);
-		glVertex3fv(vertice[0]);
-		glVertex3fv(vertice[4]);
-		glVertex3fv(vertice[7]);
-		glVertex3fv(vertice[1]);
-	glEnd();
-	glBegin(GL_POLYGON); // Trasera
-    glColor3fv(colores[1]);
-		glVertex3fv(vertice[6]);
-		glVertex3fv(vertice[5]);
-		glVertex3fv(vertice[3]);
-		glVertex3fv(vertice[2]);
-	glEnd();
-	glBegin(GL_POLYGON);  // Izquierda
-    glColor3fv(colores[2]);
-		glVertex3fv(vertice[1]);
-		glVertex3fv(vertice[7]);
-		glVertex3fv(vertice[6]);
-		glVertex3fv(vertice[2]);
-	glEnd();
-    glBegin(GL_POLYGON); // Derecha
-        glColor3fv(colores[3]);
-        glVertex3fv(vertice[0]);
-        glVertex3fv(vertice[3]);
-        glVertex3fv(vertice[5]);
-        glVertex3fv(vertice[4]);
-    glEnd();
-	glBegin(GL_POLYGON);  // Arriba
-    glColor3fv(colores[4]);
-		glVertex3fv(vertice[4]);
-		glVertex3fv(vertice[5]);
-		glVertex3fv(vertice[6]);
-		glVertex3fv(vertice[7]);
-	glEnd();
-    glBegin(GL_POLYGON); // Abajo
-        glColor3fv(colores[5]);
-        glVertex3fv(vertice[0]);
-        glVertex3fv(vertice[1]);
-        glVertex3fv(vertice[2]);
-        glVertex3fv(vertice[3]);
-    glEnd();
+        glTranslatef(coordenadas_iniciales[0],coordenadas_iniciales[1], coordenadas_iniciales[2]);
+        glBegin(GL_POLYGON); // Frontal
+            glColor3fv(colores[0]);
+            glVertex3fv(vertice[0]);
+            glVertex3fv(vertice[4]);
+            glVertex3fv(vertice[7]);
+            glVertex3fv(vertice[1]);
+        glEnd();
+        glBegin(GL_POLYGON); // Trasera
+            glColor3fv(colores[1]);
+            glVertex3fv(vertice[6]);
+            glVertex3fv(vertice[5]);
+            glVertex3fv(vertice[3]);
+            glVertex3fv(vertice[2]);
+        glEnd();
+        glBegin(GL_POLYGON);  // Izquierda
+            glColor3fv(colores[2]);
+            glVertex3fv(vertice[1]);
+            glVertex3fv(vertice[7]);
+            glVertex3fv(vertice[6]);
+            glVertex3fv(vertice[2]);
+        glEnd();
+        glBegin(GL_POLYGON); // Derecha
+            glColor3fv(colores[3]);
+            glVertex3fv(vertice[0]);
+            glVertex3fv(vertice[3]);
+            glVertex3fv(vertice[5]);
+            glVertex3fv(vertice[4]);
+        glEnd();
+        glBegin(GL_POLYGON);  // Arriba
+            glColor3fv(colores[4]);
+            glVertex3fv(vertice[4]);
+            glVertex3fv(vertice[5]);
+            glVertex3fv(vertice[6]);
+            glVertex3fv(vertice[7]);
+        glEnd();
+        glBegin(GL_POLYGON); // Abajo
+            glColor3fv(colores[5]);
+            glVertex3fv(vertice[0]);
+            glVertex3fv(vertice[1]);
+            glVertex3fv(vertice[2]);
+            glVertex3fv(vertice[3]);
+        glEnd();
     glPopMatrix();
 }
 
