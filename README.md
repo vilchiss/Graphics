@@ -1,6 +1,6 @@
 Rubik
 =====
-Modelo del cubo Rubik. Construido con OpenGL y freeGLUT.  
+Modelo del cubo Rubik, muestra las rotaciones. Construido con OpenGL y freeGLUT.  
 Para compilar y ejecutar:
 
     $ make run  
@@ -10,4 +10,4 @@ Para compilar y ejecutar:
 *   freeGLUT
 
 #### To-Do:  
-*   Agregar movimientos de las caras
+*   Controlar las rotaciones con el teclado
